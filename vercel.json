@@ -1,11 +1,22 @@
 {
-  "buildCommand": "echo 'Static site ready for deployment'",
+  "buildCommand": "echo 'Static site ready'",
   "outputDirectory": ".",
-  "installCommand": "echo 'No dependencies required'",
-  "github": {
-    "enabled": true,
-    "autoAlias": false
-  },
+  "installCommand": "echo 'No install needed'",
+  "framework": "static",
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/fr",
+      "destination": "/fr/index.html"
+    },
+    {
+      "source": "/en",
+      "destination": "/en/index.html"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)\\.(js|css|ttf|ttx|woff|woff2|eot|svg|gif|ico|jpg|jpeg|png|webp)$",
@@ -24,12 +35,6 @@
           "value": "public, max-age=3600, must-revalidate"
         }
       ]
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/index.html"
     }
   ]
 }
