@@ -1,0 +1,166 @@
+/* ========================================================================
+   BEERS-GALLERY.CSS — Section galerie de bières
+   ========================================================================
+   
+   Purpose: Styles la galerie d'affichage des bières avec système de
+            catégories, filtres, et carrousel de sélection.
+   
+   Structure:
+   - .beers-gallery: Conteneur principal
+   - .beers-gallery__filters: Boutons de catégories
+   - .beers-gallery__grid: Grille d'affichage des bières
+   - .beers-gallery__item: Carte individuelle de bière
+   
+   ========================================================================== */
+
+.beers-gallery {
+  background: #2c77b9;
+  padding: clamp(80px, 10vw, 140px) clamp(16px, 3vw, 48px);
+  overflow-x: hidden;
+}
+
+.beers-gallery__inner {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Titre en haut à gauche */
+.beers-gallery__head {
+  margin-bottom: clamp(20px, 3vw, 40px);
+  text-align: left;
+  max-width: 600px;
+  padding: 0;
+}
+
+.beers-gallery__title {
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  margin: 0 0 10px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.beers-gallery__title span {
+  color: var(--c-cta, var(--color-accent-gold));
+}
+
+/* Ligne dorée pleine largeur */
+.beers-gallery__divider {
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 3%,
+    var(--c-cta, var(--color-accent-gold)) 3%,
+    var(--c-cta, var(--color-accent-gold)) 38%,
+    #d0d0d0 38%,
+    #d0d0d0 97%,
+    transparent 97%,
+    transparent 100%
+  );
+  margin-top: 0;
+  margin-bottom: clamp(30px, 4vw, 60px);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Grille des images */
+.beers-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 3vw, 48px);
+}
+
+.beers-gallery__item {
+  aspect-ratio: 0.75;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #1a1a1a;
+  position: relative;
+}
+
+.beers-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* Overlay pour la dernière image */
+.beers-gallery__item--cta {
+  position: relative;
+  cursor: pointer;
+}
+
+.beers-gallery__item--cta .beers-gallery__overlay-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 600;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  pointer-events: none;
+  padding: 24px;
+  line-height: 1.3;
+}
+
+/* Wrapper pour chaque item */
+.beers-gallery__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Titres et sous-titres sous chaque image */
+.beers-gallery__caption {
+  margin-top: 14px;
+  text-align: center;
+  width: 100%;
+  position: static;
+}
+
+.beers-gallery__caption .beers-gallery__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.beers-gallery__caption .beers-gallery__subtitle {
+  font-size: 1rem;
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .beers-gallery__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .beers-gallery__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .beers-gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

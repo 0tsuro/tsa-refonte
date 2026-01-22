@@ -1,0 +1,28 @@
+# Environnement et Secrets
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node/NPM (si utilisé)
+node_modules/
+npm-debug.log
+
+# PHP
+vendor/
+composer.lock
+
+# Logs
+*.log
+
+# Fichiers temporaires
+*.tmp
+*.temp

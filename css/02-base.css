@@ -1,0 +1,30 @@
+/* ==========================================================================
+   BASE / LAYOUT
+   ========================================================================== */
+
+html,
+body {
+  height: auto;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--nav-h);
+}
+
+.site-main {
+  flex: 1;
+}
+
+/* reset liens téléphone & mail */
+a[href^="tel"],
+a[href^="mailto"] {
+  color: inherit;
+  text-decoration: none;
+}
+a[href^="tel"]:hover,
+a[href^="mailto"]:hover {
+  color: #fff;
+}

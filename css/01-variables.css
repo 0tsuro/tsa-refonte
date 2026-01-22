@@ -1,0 +1,137 @@
+:root {
+  /* ========================================================================
+     COULEURS PRINCIPALES
+     ======================================================================== */
+
+  /* Couleurs primaires du site */
+  --color-dark: #171614; /* Texte foncé principal */
+  --color-dark-alt: #0e0e0e; /* Texte très foncé (variante) */
+  --color-dark-grey: #181818; /* Gris très foncé */
+  --color-light: #ffffff; /* Beige clair (fond) */
+  --color-accent-gold: #e66a00; /* Or/doré (accents) */
+  --color-accent-gold-alt: #e66a00; /* Or plus foncé (variante) */
+
+  /* Teintes pour gradients et overlays */
+  --color-gold-trans-95: #e66a00;
+  --color-gold-trans-1: #e66a00;
+
+  /* Couleurs de feedback */
+  --color-error: #ff4444;
+  --color-error-bg: rgba(255, 68, 68, 0.15);
+  --color-success: #4caf50;
+
+  /* Gris et neutres */
+  --color-grey-light: #d3d3d3;
+  --color-grey-border: #ccc;
+
+  /* Navigation et éléments */
+  --c-nav-bg: #141414;
+  --c-nav-text: #f2f2f2;
+  --c-cta: #e66a00;
+  --c-cta-text: #f2f2f2;
+
+  /* Dropdowns */
+  --dd-bg: rgba(20, 20, 20, 0.98);
+  --dd-bd: 1px solid rgba(255, 255, 255, 0.08);
+  --dd-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+
+  /* ========================================================================
+     ESPACEMENT ET LAYOUT
+     ======================================================================== */
+
+  --nav-h: clamp(72px, 6vw, 88px);
+  --nav-pad-x: clamp(16px, 3vw, 48px);
+  --nav-fs: clamp(13px, 1.1vw, 15px);
+  --nav-gap: clamp(14px, 2vw, 22px);
+
+  --btn-h: clamp(38px, 4.5vw, 44px);
+  --btn-pad-x: clamp(12px, 2vw, 18px);
+
+  --dd-radius: 14px;
+  --dd-pad: 8px;
+
+  /* Largeurs dropdown */
+  --dd-min: 220px; /* menus */
+  --dd-lang-min: 92px; /* langue */
+  --dd-max: 320px; /* pour éviter des mega dropdowns */
+
+  /* Z-index */
+  --z-nav: 100;
+  --z-dd: 1000;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY SYSTEM
+   ========================================================================== */
+
+:root {
+  /* --------------------------------------------------
+     Headings
+     -------------------------------------------------- */
+
+  --fs-h1: clamp(42px, 6vw, 86px);
+  --fs-h2: clamp(32px, 4.2vw, 56px);
+  --fs-h3: clamp(26px, 3.2vw, 40px);
+  --fs-h4: clamp(22px, 2.4vw, 32px);
+  --fs-h5: clamp(18px, 1.8vw, 24px);
+  --fs-h6: clamp(16px, 1.4vw, 20px);
+
+  /* --------------------------------------------------
+     Texts
+     -------------------------------------------------- */
+
+  --fs-lead: clamp(16px, 1.8vw, 20px); /* sous-titres / intro */
+  --fs-body: clamp(14px, 1.2vw, 16px); /* texte courant */
+  --fs-small: 13px;
+  --fs-xsmall: 12px;
+
+  /* --------------------------------------------------
+     Line heights
+     -------------------------------------------------- */
+
+  --lh-tight: 1.05;
+  --lh-snug: 1.2;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.7;
+
+  /* --------------------------------------------------
+     Letter spacing
+     -------------------------------------------------- */
+
+  --ls-tight: -0.01em;
+  --ls-normal: 0;
+  --ls-wide: 0.04em;
+}
+
+@font-face {
+  font-family: "DINPro";
+  src: url("/assets/fonts/dinpro.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "InstrumentSerif";
+  src: url("/assets/fonts/InstrumentSerif-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+body {
+  font-family:
+    "DINPro",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "InstrumentSerif", serif;
+  font-weight: 200;
+}

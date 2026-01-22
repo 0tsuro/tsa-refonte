@@ -1,0 +1,93 @@
+/* ========================================================================
+   HERO-SECTION.CSS — Section Hero / Bannière Principale
+   ========================================================================
+   
+   Purpose: Styles la section hero principale avec image d'arrière-plan,
+            overlay et contenu centré.
+   
+   Structure:
+   - .hero: Conteneur full-height
+   - .hero__bg: Image d'arrière-plan
+   - .hero__overlay: Overlay sombre
+   - .hero__bottomFade: Gradient fade vers le bas
+   - .hero__inner: Conteneur du contenu
+   - .hero__content: Texte et boutons
+   
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  overflow: hidden;
+  background: var(--color-dark-alt);
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.hero__bottomFade {
+  display: none;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  min-height: inherit;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 3vw, 48px);
+
+  display: grid;
+  place-items: center;
+}
+
+.hero__content {
+  text-align: center;
+  padding-top: clamp(250px, 40vh, 450px);
+  padding-bottom: clamp(5px, 1vh, 20px);
+  color: #fff;
+}
+
+.hero__title {
+  margin: 0;
+  font-size: clamp(48px, 7.5vw, 130px);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+}
+
+.hero__subtitle {
+  margin-top: 14px;
+  font-size: clamp(16px, 2vw, 22px);
+  line-height: var(--lh-normal);
+}
+
+.hero__actions {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero__actions .btn {
+  flex: 1;
+  min-width: 200px;
+  max-width: 280px;
+}
+
+/* ICONE ET BOUTONS SUPPRIMÉS - Voir css/components/button.css */

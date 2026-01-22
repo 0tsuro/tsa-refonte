@@ -1,0 +1,129 @@
+/* ==========================================================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================================================== */
+
+/* Classes de base pour les éléments à révéler */
+[data-reveal],
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.hero__title,
+.hero__subtitle,
+.hero__actions,
+.section-title,
+.section-kicker,
+.card,
+.pack-callouts,
+.beers-gallery__item,
+.beers-gallery__caption,
+.citation-section,
+.format-carousel,
+.engagement-section,
+.banner,
+.cta,
+.hero {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+/* État final après révélation */
+[data-reveal].revealed,
+h1.revealed,
+h2.revealed,
+h3.revealed,
+h4.revealed,
+h5.revealed,
+h6.revealed,
+.hero__title.revealed,
+.hero__subtitle.revealed,
+.hero__actions.revealed,
+.section-title.revealed,
+.section-kicker.revealed,
+.card.revealed,
+.pack-callouts.revealed,
+.beers-gallery__item.revealed,
+.beers-gallery__caption.revealed,
+.citation-section.revealed,
+.format-carousel.revealed,
+.engagement-section.revealed,
+.banner.revealed,
+.cta.revealed,
+.hero.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Décalage pour les animations en cascade */
+.beers-gallery__item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.beers-gallery__item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.beers-gallery__item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.beers-gallery__item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.beers-gallery__item:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+.card:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.card:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.card:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+/* Sauf pour les éléments déjà visibles au chargement (hero) */
+.hero {
+  opacity: 1;
+  transform: translateY(0);
+  transition: none;
+}
+
+@media (prefers-reduced-motion: prefer-reduced-motion) {
+  [data-reveal],
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .hero__title,
+  .hero__subtitle,
+  .hero__actions,
+  .section-title,
+  .section-kicker,
+  .card,
+  .pack-callouts,
+  .beers-gallery__item,
+  .beers-gallery__caption,
+  .citation-section,
+  .brasserie-section,
+  .format-carousel,
+  .engagement-section,
+  .banner,
+  .cta {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

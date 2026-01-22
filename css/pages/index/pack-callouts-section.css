@@ -1,0 +1,302 @@
+/* ========================================================================
+   PACK-CALLOUTS-SECTION.CSS — Section Branding / Pack Callouts
+   ========================================================================
+   
+   Purpose: Styles la section de présentation avec image centrale et textes
+            positionnés autour. Utilise CSS Grid pour stabilité.
+   
+   Structure:
+   - .section-brand: Conteneur principal avec gradient background
+   - .brand-head: Titre et sous-titre section
+   - .pack-callouts: Grille 3x2 avec image au centre
+   - .pack-text: Blocs de texte avec lignes dorées décoratives
+   - .pack-media: Image centrée verrouillée
+   - .brand-cta: Section CTA finale
+   
+   Détails clés:
+   - Grid Layout: 3 colonnes, image colonne 2, textes aux extrémités
+   - Lignes dorées: Pseudo-éléments ::before pour points
+   - Responsive: Stack verticale < 980px, grille grid uniquement desktop
+   
+   ========================================================================== */
+
+.section-brand {
+  background: radial-gradient(
+    circle at center,
+    #1a1a1a 0%,
+    var(--color-dark-alt) 55%,
+    #080808 100%
+  );
+  color: #fff;
+  padding: clamp(80px, 10vw, 140px) 0;
+  overflow: hidden;
+}
+
+.section-brand__inner {
+  max-width: 100%;
+  margin: 0;
+  padding: 0 clamp(16px, 3vw, 48px);
+}
+
+/* Titres en haut à gauche */
+.brand-head {
+  margin-bottom: clamp(60px, 8vw, 100px);
+  text-align: left;
+  max-width: 800px;
+}
+
+.section-kicker {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin: 0 0 14px;
+}
+
+.section-title {
+  font-size: clamp(28px, 4vw, 56px);
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+.section-title span {
+  color: var(--c-cta, var(--color-accent-gold));
+}
+
+/* =========================================================================
+   PACK GRID (stable) - 3 colonnes + 2 lignes
+   Image au centre, span sur 2 lignes => ne bouge pas selon longueur textes
+   ========================================================================= */
+
+.pack-callouts {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 440px) 1fr;
+  grid-template-rows: auto auto;
+  align-items: center;
+
+  column-gap: clamp(24px, 4vw, 56px);
+  row-gap: clamp(18px, 3vw, 28px);
+
+  padding: 0 clamp(16px, 3vw, 48px);
+}
+
+/* Image centrée et verrouillée */
+.pack-media {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pack-media img {
+  width: min(420px, 100%);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 40px 90px rgba(0, 0, 0, 0.65));
+}
+
+/* Text blocks */
+.pack-text {
+  max-width: 360px;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.88;
+}
+
+.pack-text h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Positions exactes */
+.pack-text--left {
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: start;
+  text-align: left;
+}
+
+.pack-text--rightTop {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  text-align: right;
+}
+
+.pack-text--rightBottom {
+  grid-column: 3;
+  grid-row: 2;
+  justify-self: end;
+  text-align: right;
+}
+
+/* =========================================================================
+   LIGNES DORÉES — SANS ABSOLUTE (=> ne se mélangent jamais)
+   Rendu demandé :
+   - gauche : titre (aligné gauche) + ligne dessous (dot à gauche)
+   - droite : ligne au-dessus (dot à droite) + titre + ligne dessous (dot à droite)
+   ========================================================================= */
+
+:root {
+  --gold-line: rgba(201, 162, 74, 0.7);
+  --gold-dot: var(--color-gold-trans-95);
+}
+
+/* commun */
+.pack-rule {
+  display: block;
+  width: 130px;
+  height: 1px;
+  background: var(--gold-line);
+  position: relative;
+}
+
+.pack-rule::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--gold-dot);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ===== gauche : titre + ligne dessous ===== */
+.pack-text--left h3 {
+  margin-bottom: 12px;
+}
+
+.pack-text--left .pack-rule {
+  margin: 0 0 12px;
+}
+
+.pack-text--left .pack-rule::before {
+  left: -3px; /* dot à gauche */
+}
+
+/* ===== droite : ligne + titre + ligne (dot à droite) ===== */
+.pack-text--rightTop,
+.pack-text--rightBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* aligne tout à droite */
+}
+
+.pack-text--rightTop .pack-rule,
+.pack-text--rightBottom .pack-rule {
+  margin: 0;
+}
+
+.pack-text--rightTop .pack-rule:first-child,
+.pack-text--rightBottom .pack-rule:first-child {
+  margin-bottom: 10px; /* espace ligne -> titre */
+}
+
+.pack-text--rightTop h3,
+.pack-text--rightBottom h3 {
+  margin: 0 0 10px; /* titre -> ligne dessous */
+}
+
+.pack-text--rightTop .pack-rule:last-child,
+.pack-text--rightBottom .pack-rule:last-child {
+  margin-bottom: 12px; /* ligne dessous -> texte */
+}
+
+.pack-text--rightTop .pack-rule::before,
+.pack-text--rightBottom .pack-rule::before {
+  right: -3px; /* dot à droite */
+}
+
+/* =========================================================================
+   SECTION CTA — Centré avec "contactez-nous" en doré
+   ========================================================================= */
+
+.brand-cta {
+  margin-top: clamp(80px, 10vw, 120px);
+  text-align: center;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand-cta__title {
+  font-size: clamp(42px, 8vw, 72px);
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  margin: 0 0 20px;
+}
+
+.brand-cta__title span {
+  color: var(--c-cta, var(--color-accent-gold));
+  display: inline-block;
+}
+
+.brand-cta__text {
+  font-size: clamp(15px, 2vw, 17px);
+  line-height: 1.6;
+  opacity: 0.85;
+  margin: 0 0 32px;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* BOUTON CTA SUPPRIMÉ - Voir css/components/button.css */
+
+/* =========================================================================
+   RESPONSIVE - stack, cards, on coupe les règles décoratives
+   ========================================================================= */
+
+@media (max-width: 980px) {
+  .pack-callouts {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 18px;
+  }
+
+  .pack-media {
+    grid-column: 1;
+    grid-row: auto;
+    margin: 18px 0 10px;
+  }
+
+  .pack-text {
+    max-width: none;
+    width: 100%;
+    padding: 16px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: left;
+    align-items: flex-start; /* overwrite right align */
+  }
+
+  .pack-text--left,
+  .pack-text--rightTop,
+  .pack-text--rightBottom {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: stretch;
+  }
+
+  .pack-rule {
+    display: none;
+  }
+
+  .brand-cta {
+    margin-top: clamp(50px, 8vw, 80px);
+    padding: 0 20px;
+  }
+
+  /* Bouton CTA responsive - voir css/components/button.css */
+}

@@ -1,0 +1,9 @@
+config/
+includes/
+*.php
+.env
+.env.example
+.git
+.gitignore
+node_modules
+.DS_Store

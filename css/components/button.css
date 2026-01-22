@@ -1,0 +1,233 @@
+/* TSA variant (bordure dorée, texte noir, chevron à droite) */
+.btn--tsa {
+  background: transparent;
+  border: 2px solid var(--color-accent-gold-alt);
+  color: var(--color-dark-grey);
+  font-weight: 600;
+  min-width: 200px;
+  box-sizing: border-box;
+  position: relative;
+}
+.btn--tsa .btn__icon--right {
+  transform: translateX(6px);
+}
+.btn--tsa:hover {
+  background: var(--color-accent-gold-alt);
+  color: #fff;
+  padding-left: 26px;
+}
+.btn--tsa:hover .btn__icon--right {
+  width: 16px;
+  opacity: 1;
+  transform: translateX(0);
+}
+.btn--tsa .btn__icon--left {
+  display: none !important;
+}
+
+/* Harmonise la largeur des deux boutons dans la section brasserie */
+.brasserie-section__actions .btn {
+  min-width: 200px;
+  justify-content: center;
+}
+/* ==========================================================================
+   BUTTON.CSS — Composant bouton réutilisable
+   ========================================================================== */
+
+/* Base bouton */
+.btn {
+  height: 46px;
+  padding: 0 18px;
+  border-radius: 12px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.18s ease,
+    filter 0.18s ease,
+    padding-left 180ms ease,
+    padding-right 180ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+/* ICON BASE */
+.btn__icon {
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+
+  display: inline-flex;
+  align-items: center;
+
+  transition:
+    width 180ms ease,
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.btn__icon svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+  fill: currentColor;
+}
+
+/* GOLD variant */
+.btn--gold {
+  background: var(--c-cta, var(--color-accent-gold));
+  color: #fff;
+  border: none;
+}
+
+.btn--gold .btn__icon--left {
+  transform: translateX(-6px);
+}
+
+.btn--gold:hover {
+  padding-right: 26px;
+}
+
+.btn--gold:hover .btn__icon--left {
+  width: 16px;
+  opacity: 1;
+  transform: translateX(0);
+  color: #fff;
+}
+
+/* ORANGE variant */
+.btn--orange {
+  background: #e66a00;
+  color: #fff;
+  border: none;
+  max-width: 220px;
+}
+
+.btn--orange .btn__icon--right {
+  transform: translateX(6px);
+}
+
+.btn--orange:hover {
+  background: #ffffff;
+  padding-right: 26px;
+}
+
+.btn--orange:hover .btn__icon--right {
+  width: 16px;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.btn--orange .btn__icon--left {
+  display: none !important;
+}
+.btn--orange:hover {
+  background: #cc5a00;
+}
+
+.btn--gold .btn__icon--right {
+  transform: translateX(6px);
+}
+
+.btn--gold:hover .btn__icon--right {
+  width: 16px;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* GHOST variant */
+.btn--ghost {
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(201, 162, 74, 0.55);
+  color: #fff;
+}
+
+.btn--ghost:hover {
+  background: #fff;
+  color: #000;
+  padding-left: 26px;
+}
+
+.btn--ghost .btn__icon--right {
+  transform: translateX(6px);
+}
+
+.btn--ghost:hover .btn__icon--right {
+  width: 16px;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* CTA button (larger variant) */
+.btn--cta {
+  height: 52px;
+  padding: 0 36px;
+  font-size: 15px;
+
+  background: var(--c-cta, var(--color-accent-gold));
+  color: #fff;
+
+  box-shadow: 0 4px 16px rgba(201, 162, 74, 0.25);
+}
+
+.btn--cta:hover {
+  box-shadow: 0 8px 24px rgba(201, 162, 74, 0.35);
+  padding-left: 52px;
+  padding-right: 52px;
+}
+
+.btn--cta:active {
+  transform: translateY(0);
+}
+
+/* CTA with icon */
+.btn--cta .btn__icon--left {
+  transform: translateX(-6px);
+}
+
+.btn--cta:hover .btn__icon--left {
+  width: 16px;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.btn--cta .btn__icon--right {
+  transform: translateX(6px);
+}
+
+.btn--cta:hover .btn__icon--right {
+  width: 16px;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===================== MOBILE / RESPONSIVE ===================== */
+
+@media (max-width: 768px) {
+  /* Sur mobile: enlever l'apparition des chevrons au hover */
+  .btn:hover {
+    transform: none;
+  }
+
+  .btn--gold:hover .btn__icon--left,
+  .btn--gold:hover .btn__icon--right,
+  .btn--tsa:hover .btn__icon--right,
+  .btn--ghost:hover .btn__icon--right,
+  .btn--cta:hover .btn__icon--left,
+  .btn--cta:hover .btn__icon--right {
+    width: 0;
+    opacity: 0;
+  }
+}

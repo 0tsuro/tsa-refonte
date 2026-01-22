@@ -1,0 +1,419 @@
+/* ========================================================================
+   TIMELINE-SECTION.CSS — Section Frise Chronologique
+   ========================================================================
+   
+   Purpose: Styles la section timeline avec frise verticale, cartes alternées,
+            et animations au scroll. Utilisée sur la page d'accueil.
+   
+   Structure:
+   - .timeline: Conteneur principal
+   - .timelineRail: Frise verticale grise
+   - .timelineItem: Conteneur de carte (alternance left/right)
+   - .timelineDot: Points dorés sur la frise
+   - .card: Contenu avec titre et paragraphe
+   
+   Variables CSS utilisées:
+   - --primary, --primaryDark: Couleurs primaires
+   - --muted: Couleur texte secondaire
+   - --surface, --cardShadow: Styles cartes
+   
+   Notes: 
+   - La ligne descend au-dessus/en-dessous du padding (top/bottom négatifs)
+   - Images supprimées, cartes minimalistes (titre + paragraphe)
+   - Points et titre en or (#C9A24A)
+   ========================================================================== */
+
+/* Styles pour le composant timeline uniquement */
+
+.timeline {
+  padding: 5px 0 110px;
+  position: relative;
+  background: #ffffff;
+  color: #000;
+  overflow: hidden;
+}
+
+.timeline .container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline .hero {
+  text-align: left;
+  padding-top: 20px;
+  margin-bottom: 30px;
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  min-height: auto !important;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primaryDark);
+
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  margin-top: 50px;
+}
+
+.timeline .hero h1 {
+  margin-top: 2px;
+  margin-left: 0;
+  font-size: clamp(28px, 4vw, 44px);
+  letter-spacing: 0.6px;
+  text-align: left;
+}
+
+.timeline .hero h1 span {
+  color: #e66a00;
+}
+
+.timeline .hero p {
+  margin: 10px 0 0 0;
+  max-width: 760px;
+  color: var(--muted);
+  line-height: 1.6;
+  text-align: left;
+}
+
+.timelineRail {
+  position: absolute;
+  top: -90px;
+  bottom: -200px;
+  right: 350px;
+  width: 2px;
+  border-radius: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(150, 150, 150, 0.6),
+    rgba(120, 120, 120, 0.4)
+  );
+  box-shadow: none;
+}
+
+.timelineItem {
+  position: relative;
+  width: 100%;
+  margin: 0 0 50px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.timelineItem.right {
+  justify-content: flex-end;
+}
+
+.timelineDot {
+  width: 16px;
+  height: 16px;
+  background: #e66a00;
+  border-radius: 50%;
+  position: absolute;
+  right: 350px;
+  transform: translateX(50%);
+  top: 20px;
+  box-shadow: none;
+}
+
+.timelineItem.right .card {
+  margin-left: auto;
+  margin-right: -200px;
+}
+
+.card {
+  width: min(420px, 85%);
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--cardShadow);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  position: relative;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.cardTop {
+  position: relative;
+}
+
+.imgWrap {
+  width: 100%;
+  height: 140px;
+  background: linear-gradient(
+    135deg,
+    rgba(63, 81, 181, 0.12),
+    rgba(255, 64, 129, 0.08)
+  );
+  overflow: hidden;
+}
+
+.imgWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+  transition: transform 0.35s ease;
+}
+
+.card:hover .imgWrap img {
+  transform: scale(1.02);
+}
+
+.cardTop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: none;
+  pointer-events: none;
+}
+
+.date {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: rgba(255, 64, 129, 0.92);
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  box-shadow: 0 14px 28px rgba(255, 64, 129, 0.25);
+}
+
+.cardBody {
+  padding: 18px 18px 16px;
+}
+
+.cardBody h2 {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.timeline-number {
+  color: #e66a00;
+  margin-right: 8px;
+}
+
+.cardBody p {
+  color: var(--muted);
+  line-height: 1.65;
+  margin-bottom: 12px;
+}
+
+.meta {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+.meta li {
+  position: relative;
+  padding-left: 18px;
+  color: rgba(33, 33, 33, 0.82);
+  font-size: 14px;
+}
+
+.meta li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(63, 81, 181, 0.85);
+  position: absolute;
+  left: 0;
+  top: 7px;
+}
+
+.footerNote {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.pulse {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(63, 81, 181, 0.85);
+  box-shadow: 0 0 0 0 rgba(63, 81, 181, 0.35);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(63, 81, 181, 0.35);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(63, 81, 181, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(63, 81, 181, 0.35);
+  }
+}
+
+/* reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.55s ease,
+    transform 0.55s ease;
+}
+
+.reveal.left {
+  transform: translate(-56px, 16px);
+}
+.reveal.right {
+  transform: translate(56px, 16px);
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* little arrow pointers like classic timeline */
+.timelineItem.left .card::after,
+.timelineItem.right .card::after {
+  content: "";
+  position: absolute;
+  top: 36px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timelineItem.left .card::after {
+  right: -14px;
+  border-width: 10px 0 10px 14px;
+  border-color: transparent transparent transparent var(--surface);
+  filter: drop-shadow(0 12px 14px rgba(0, 0, 0, 0.15));
+}
+
+.timelineItem.right .card::after {
+  left: -14px;
+  border-width: 10px 14px 10px 0;
+  border-color: transparent var(--surface) transparent transparent;
+  filter: drop-shadow(0 12px 14px rgba(0, 0, 0, 0.15));
+}
+
+/* Go top button */
+.toTop {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(245, 245, 245, 0.92);
+  color: rgba(33, 33, 33, 0.88);
+  font-size: 18px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
+}
+
+.toTop.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.toTop:hover {
+  transform: translateY(-2px);
+}
+
+/* responsive */
+@media (max-width: 840px) {
+  .timeline {
+    padding: 5px 0 60px;
+  }
+
+  .timelineRail {
+    left: 44px;
+    right: auto;
+    transform: none;
+  }
+  .timelineDot {
+    left: 44px;
+    transform: none;
+  }
+
+  .timelineItem {
+    justify-content: flex-start !important;
+  }
+
+  .card {
+    width: calc(100% - 74px);
+    margin-left: 74px;
+  }
+
+  .timelineItem.left .card::after,
+  .timelineItem.right .card::after {
+    left: -14px;
+    right: auto;
+    border-width: 10px 14px 10px 0;
+    border-color: transparent var(--surface) transparent transparent;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline .container {
+    width: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+
+  .timelineRail {
+    display: none;
+  }
+
+  .timelineDot {
+    display: none;
+  }
+
+  .timelineItem {
+    justify-content: flex-start !important;
+  }
+
+  .card {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    min-height: auto;
+  }
+
+  .timelineItem.left .card::after,
+  .timelineItem.right .card::after {
+    display: none;
+  }
+
+  .timeline-number {
+    font-size: 24px;
+  }
+}

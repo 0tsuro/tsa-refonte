@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Transport Saint Omer – TSA</title>
+
+  <link rel="stylesheet" href="../css/00-reset.css">
+  <link rel="stylesheet" href="../css/01-variables.css">
+  <link rel="stylesheet" href="../css/02-base.css">
+  <link rel="stylesheet" href="../css/components/button.css">
+  <link rel="stylesheet" href="../css/components/navbar.css">
+  <link rel="stylesheet" href="../css/components/footer.css">
+  <link rel="stylesheet" href="../css/components/reveal.css">
+  <link rel="stylesheet" href="../css/components/scroll-indicator.css">
+  <link rel="stylesheet" href="../css/pages/index/hero.css">
+  <link rel="stylesheet" href="../css/pages/index/pack-callouts-section.css">
+  <link rel="stylesheet" href="../css/pages/index/beers-gallery.css">
+  <link rel="stylesheet" href="../css/pages/index/recipes-gallery.css">
+  <link rel="stylesheet" href="../css/pages/index/citation-section.css">
+  <link rel="stylesheet" href="../css/pages/index/brasserie-section.css">
+  <link rel="stylesheet" href="../css/pages/index/timeline-section.css">
+  <link rel="stylesheet" href="../css/pages/index/engagement-section.css">
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <!-- NAVBAR -->
+    <header class="site-header" role="banner">
+      <nav class="navbar" aria-label="Navigation principale">
+        <div class="navbar__inner">
+
+          <a class="navbar__logo" href="/fr/index.html" aria-label="Aller à l'accueil">
+            <img src="/assets/img/logo.svg" alt="Transport Saint Arnould">
+          </a>
+
+          <!-- Menu desktop -->
+          <ul class="navbar__menu" id="mainNav" role="list">
+            <li class="nav-item">
+              <a class="nav-link is-active" href="/fr/index.html">
+                Accueil
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/fr/contact.html">
+                Nous Contacter
+              </a>
+            </li>
+          </ul>
+
+          <div class="navbar__actions">
+            <a class="btn-cta" href="https://brasserie-goudale.com">
+              <span class="btn-cta__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24">
+                  <defs><path id="SVG1pzpbdYY" fill="#fff" d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z"/></defs>
+                  <use fill-rule="evenodd" href="#SVG1pzpbdYY" transform="rotate(-180 5.02 9.505)"/>
+                </svg>
+              </span>
+              <span class="btn-cta__text">Visiter Goudale</span>
+            </a>
+
+            <!-- Lang desktop -->
+            <div class="lang lang--switch">
+              <button class="lang__btn" type="button" aria-label="Choisir la langue">
+                FR
+                <span class="chev" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m7 10l5 5l5-5" stroke-width="1"/>
+                  </svg>
+                </span>
+              </button>
+
+              <div class="dropdown dropdown--right" role="menu" aria-label="Choix de langue">
+                <a class="dropdown__link" href="/en/index.html" role="menuitem">
+                  EN
+                </a>
+              </div>
+            </div>
+
+            <!-- Burger -->
+            <button class="nav-burger" type="button"
+              aria-label="Ouvrir le menu"
+              aria-expanded="false"
+              aria-controls="mobileNav">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="#fff" d="M4 17.27v-1h16v1zm0-4.77v-1h16v1zm0-4.77v-1h16v1z"/>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+      </nav>
+
+      <!-- OVERLAY : il ne doit jamais apparaître sur desktop (CSS s'en charge) -->
+      <div class="mobile-overlay" id="mobileNav" aria-hidden="true">
+        <div class="mobile-overlay__inner">
+
+          <div class="mobile-overlay__top">
+            <a class="mobile-overlay__logo" href="/fr/index.html">
+              <img src="/assets/img/logo.svg" alt="Transport Saint-Omer">
+            </a>
+
+            <button class="mobile-overlay__close" type="button" aria-label="Fermer le menu">
+              ✕
+            </button>
+          </div>
+
+          <div class="mobile-overlay__content">
+            <div class="mobile-overlay__menu-slot"></div>
+
+            <div class="mobile-lang">
+              <div class="mobile-lang__label">Langue</div>
+
+              <div class="mobile-lang__row">
+                <a class="mobile-lang__pill is-active" href="/fr/index.html">FR</a>
+                <a class="mobile-lang__pill" href="/en/index.html">EN</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="site-main">
+
+      <!-- ===================== HERO ===================== -->
+      <section class="hero">
+        <img class="hero__bg" src="../assets/img/background.png" alt="Transport Saint-Omer" />
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="hero__bottomFade" aria-hidden="true"></div>
+
+        <div class="hero__inner">
+          <div class="hero__content">
+            <h1 class="hero__title">La route, notre métier.</h1>
+            <p class="hero__subtitle">Depuis plus de 25 ans TSA, vous accompagne pour tous vos transports à travers l'Europe.</p>
+
+            <div class="hero__actions">
+              <a href="/fr/contact.html" class="btn btn--gold" style="margin: 0 auto;">
+                <span class="btn__icon btn__icon--left" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24" fill="currentColor">
+                <path d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z" transform="rotate(-180 5.02 9.505)"/>
+              </svg></span>
+                <span>Obtenir un devis</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <span class="scroll-indicator__text">Scroll</span>
+          <div class="scroll-indicator__line"></div>
+        </div>
+      </section>
+
+      <!-- ===================== BEERS GALLERY ===================== -->
+      <section class="beers-gallery">
+        <div class="beers-gallery__inner">
+          <div class="beers-gallery__head">
+            <h2 class="beers-gallery__title">Nos <span>services</span></h2>
+          </div>
+
+          <div class="beers-gallery__divider"></div>
+
+          <div class="beers-gallery__grid">
+            <div class="beers-gallery__item-wrapper">
+              <div class="beers-gallery__item">
+                <img src="../assets/img/Index/recettes/blonde.png" alt="Service 1">
+              </div>
+              <div class="beers-gallery__caption">
+                <div class="beers-gallery__title">Lager</div>
+                <div class="beers-gallery__subtitle">Transport spécialisé</div>
+              </div>
+            </div>
+            <div class="beers-gallery__item-wrapper">
+              <div class="beers-gallery__item">
+                <img src="../assets/img/Index/recettes/cuivrée.png" alt="Service 2">
+              </div>
+              <div class="beers-gallery__caption">
+                <div class="beers-gallery__title">Bière d'abbaye</div>
+                <div class="beers-gallery__subtitle">Logistique complète</div>
+              </div>
+            </div>
+            <div class="beers-gallery__item-wrapper">
+              <div class="beers-gallery__item">
+                <img src="../assets/img/Index/recettes/Coca.png" alt="Service 3">
+              </div>
+              <div class="beers-gallery__caption">
+                <div class="beers-gallery__title">Aromatisée</div>
+                <div class="beers-gallery__subtitle">Solutions adaptées</div>
+              </div>
+            </div>
+            <div class="beers-gallery__item-wrapper">
+              <div class="beers-gallery__item">
+                <img src="../assets/img/Index/recettes/Rouge.png" alt="Service 4">
+              </div>
+              <div class="beers-gallery__caption">
+                <div class="beers-gallery__title">Stout</div>
+                <div class="beers-gallery__subtitle">Expertise reconnue</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== SECTION METIER / TIMELINE ===================== -->
+      <section class="timeline" aria-label="Company timeline">
+        <div class="container">
+            <header class="hero">
+                <div class="heroBadge">L'ENTREPRISE</div>
+                <h1>Notre activité <br> <span>en chiffres</span></h1>
+
+            </header>
+
+            <div class="timelineRail" aria-hidden="true"></div>
+
+
+
+            <!-- ITEM 2 (NEW) -->
+            <article class="timelineItem reveal right">
+                <div class="timelineDot" aria-hidden="true"></div>
+
+                <div class="card">
+                    <div class="cardBody">
+                        <h2><span class="timeline-number">400</span> Remorques</h2>
+                        <p>
+                            Un parc complet de remorques bâchées, renouvelé tous les 7 ans.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ITEM 1 -->
+            <article class="timelineItem reveal left">
+                <div class="timelineDot" aria-hidden="true"></div>
+
+                <div class="card">
+                    <div class="cardBody">
+                        <h2><span class="timeline-number">220</span> Tracteurs</h2>
+                        <p>
+                            Équipés des dernières technologies, et de l'informatique embarqué en lien avec nos équipes commerciales. Nos tracteurs sont renouvelés tous les 3 ans.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ITEM 2 -->
+            <article class="timelineItem reveal right">
+                <div class="timelineDot" aria-hidden="true"></div>
+
+                <div class="card">
+                    <div class="cardBody">
+                        <h2><span class="timeline-number">280</span> Chauffeurs</h2>
+                        <p>
+                            Certifiés ADR (marchandises dangereuses) et formés à l'écoconduite.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ITEM 3 -->
+            <article class="timelineItem reveal left">
+                <div class="timelineDot" aria-hidden="true"></div>
+
+                <div class="card">
+                    <div class="cardBody">
+                        <h2>Station de lavage et <br>garage entretien<span class="timeline-number">intégré</span></h2>
+                        <p>
+                            Des camions propres et entretenus par nos équipes internes pour assurer une fiabilité sans faille à vos transports. 
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ITEM 4 -->
+            <article class="timelineItem reveal right">
+                <div class="timelineDot" aria-hidden="true"></div>
+
+                <div class="card">
+                    <div class="cardBody">
+                        <h2>Stockage sécurisé <br>de <span class="timeline-number">150 000</span>m2</h2>
+                        <p>
+                            Site sécurisé et gardiennés. Des solutions d'entreposage complètes pour toutes vos marchandises.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <button class="toTop" id="toTop" type="button" aria-label="Go to top">
+            ↑
+        </button>
+      </section>
+      <!-- ===================== END SECTION METIER / TIMELINE ===================== -->
+      <!-- ===================== RECIPES GALLERY ===================== -->
+      <section class="recipes-gallery">
+        <div class="recipes-gallery__inner">
+          <div class="recipes-gallery__head">
+            <h2 class="recipes-gallery__title">Nos <span>moyens</span></h2>
+          </div>
+
+          <div class="recipes-gallery__divider"></div>
+
+          <div class="recipes-gallery__grid">
+            <div class="recipes-gallery__item-wrapper">
+              <div class="recipes-gallery__item">
+                <img src="../assets/img/remorque.jpg" alt="Remorque">
+              </div>
+              <div class="recipes-gallery__caption">
+                <div class="recipes-gallery__title">Remorque</div>
+              </div>
+            </div>
+            <div class="recipes-gallery__item-wrapper">
+              <div class="recipes-gallery__item">
+                <img src="../assets/img/citerne.jpg" alt="Citerne">
+              </div>
+              <div class="recipes-gallery__caption">
+                <div class="recipes-gallery__title">Citerne</div>
+              </div>
+            </div>
+            <div class="recipes-gallery__item-wrapper">
+              <div class="recipes-gallery__item">
+                <img src="../assets/img/containers.jpg" alt="Containers">
+              </div>
+              <div class="recipes-gallery__caption">
+                <div class="recipes-gallery__title">Containers</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+   
+
+      <!-- ===================== BRASSERIE SECTION ===================== -->
+      <section class="brasserie-section">
+        <div class="brasserie-section__inner">
+          <div class="brasserie-section__kicker">La brasserie</div>
+          <h2 class="brasserie-section__title">Brasserie <span>100%</span></h2>
+          <div class="brasserie-section__desc">
+            Depuis plus d'un siècle, la Brasserie Goudale perpétue un savoir-faire brassicole d'exception, alliant tradition et innovation pour offrir des bières uniques et authentiques.
+          </div>
+          <div class="brasserie-section__actions">
+            <a href="https://brasserie-goudale.com" class="btn btn--gold">
+              <span class="btn__icon btn__icon--left" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24" fill="currentColor">
+              <path d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z" transform="rotate(-180 5.02 9.505)"/>
+            </svg></span>
+              <span>Découvrir la Brasserie Goudale</span>
+              
+            </a>            <a href="https://brasserie-saint-omer.com" class="btn btn--tsa btn--tsa">
+              
+              <span>Découvrir la Brasserie Saint Omer</span>
+              <span class="btn__icon btn__icon--right" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24" fill="currentColor">
+              <path d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z" transform="rotate(-180 5.02 9.505)"/>
+            </svg></span>
+            </a>          </div>
+          <div class="brasserie-carousel">
+            <div class="brasserie-carousel__track">
+              <img class="brasserie-carousel__img brasserie-carousel__img--md" src="../assets/img/carroussel entreprise/car1.jpg" alt="Carrousel 1"><img class="brasserie-carousel__img brasserie-carousel__img--md" src="../assets/img/carroussel entreprise/car2.jpg" alt="Carrousel 2"><img class="brasserie-carousel__img brasserie-carousel__img--md" src="../assets/img/carroussel entreprise/car3.jpg" alt="Carrousel 3"><img class="brasserie-carousel__img brasserie-carousel__img--md" src="../assets/img/carroussel entreprise/car4.jpg" alt="Carrousel 4"><img class="brasserie-carousel__img brasserie-carousel__img--md" src="../assets/img/carroussel entreprise/car5.jpg" alt="Carrousel 5"><img class="brasserie-carousel__img brasserie-carousel__img--md" src="../assets/img/carroussel entreprise/car6.jpg" alt="Carrousel 6"><img class="brasserie-carousel__img brasserie-carousel__img--md" src="../assets/img/carroussel entreprise/car7.jpg" alt="Carrousel 7"><img class="brasserie-carousel__img brasserie-carousel__img--md" src="../assets/img/carroussel entreprise/car1.jpg" alt="Carrousel 1"><img class="brasserie-carousel__img brasserie-carousel__img--md" src="../assets/img/carroussel entreprise/car2.jpg" alt="Carrousel 2"><img class="brasserie-carousel__img brasserie-carousel__img--md" src="../assets/img/carroussel entreprise/car3.jpg" alt="Carrousel 3"><img class="brasserie-carousel__img brasserie-carousel__img--md" src="../assets/img/carroussel entreprise/car4.jpg" alt="Carrousel 4"><img class="brasserie-carousel__img brasserie-carousel__img--md" src="../assets/img/carroussel entreprise/car5.jpg" alt="Carrousel 5"><img class="brasserie-carousel__img brasserie-carousel__img--md" src="../assets/img/carroussel entreprise/car6.jpg" alt="Carrousel 6"><img class="brasserie-carousel__img brasserie-carousel__img--md" src="../assets/img/carroussel entreprise/car7.jpg" alt="Carrousel 7"><img class="brasserie-carousel__img brasserie-carousel__img--md" src="../assets/img/carroussel entreprise/car1.jpg" alt="Carrousel 1"><img class="brasserie-carousel__img brasserie-carousel__img--md" src="../assets/img/carroussel entreprise/car2.jpg" alt="Carrousel 2"><img class="brasserie-carousel__img brasserie-carousel__img--md" src="../assets/img/carroussel entreprise/car3.jpg" alt="Carrousel 3"><img class="brasserie-carousel__img brasserie-carousel__img--md" src="../assets/img/carroussel entreprise/car4.jpg" alt="Carrousel 4"><img class="brasserie-carousel__img brasserie-carousel__img--md" src="../assets/img/carroussel entreprise/car5.jpg" alt="Carrousel 5"><img class="brasserie-carousel__img brasserie-carousel__img--md" src="../assets/img/carroussel entreprise/car6.jpg" alt="Carrousel 6"><img class="brasserie-carousel__img brasserie-carousel__img--md" src="../assets/img/carroussel entreprise/car7.jpg" alt="Carrousel 7">            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ===================== CITATION ANDRÉ PECQUEUR ===================== -->
+      <section class="citation-section">
+        <img class="citation-section__img" src="../assets/img/pdg.jpg" alt="André Pecqueur, PDG de la Brasserie Goudale">
+        <div class="citation-section__text">
+          <span class="citation-section__quote">&laquo;</span><br>
+          Notre seul patron ici,<br>
+          c'est le client.<br>
+          <span class="citation-section__author">- ANDRÉ PECQUEUR, PDG DE LA BRASSERIE GOUDALE</span>
+        </div>
+      </section>
+
+
+      <!-- ===================== SECTION ENGAGEMENTS ===================== -->
+      <section class="engagement-section">
+        <div class="engagement-container">
+          <div class="engagement-content">
+            <div class="engagement-badge">RESPONSABILITÉ</div>
+            <h2 class="engagement-title">
+              Enterprise<br><span class="gold-text">100% </span>familial et indépendante
+            </h2>
+          <div class="engagement-images">
+            <img src="../assets/img/certifs/Certifications_Fond transparent copie.png" alt="Certification 1" loading="lazy">
+            <img src="../assets/img/certifs/Certifications_Fond transparent copie 2.png" alt="Certification 2" loading="lazy">
+            <img src="../assets/img/certifs/Certifications_Fond transparent copie 3.png" alt="Certification 3" loading="lazy">
+            <img src="../assets/img/certifs/Certifications_Fond transparent copie 4.png" alt="Certification 4" loading="lazy">
+          </div>
+        </div>
+      </section>
+      <!-- ===================== END SECTION ENGAGEMENTS ===================== -->
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer__inner">
+
+        <!-- Logo -->
+        <a class="footer__brand" href="/fr/index.html" aria-label="Retour à l'accueil">
+          <img src="/assets/img/logo.svg" alt="Transport Saint-Omer">
+        </a>
+
+        <!-- Menu footer -->
+        <nav class="footer__nav" aria-label="Navigation du pied de page">
+          <a class="footer__link" href="/fr/contact.html">Nous contacter</a>
+
+          <a class="footer__cta" href="https://brasserie-goudale.com">
+        <span class="footer__ctaIcon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24">
+            <defs>
+              <path id="SVG1pzpbdYY" fill="#fff" d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z"/>
+            </defs>
+            <use fill-rule="evenodd" href="#SVG1pzpbdYY" transform="rotate(-180 5.02 9.505)"/>
+          </svg>
+        </span>
+
+        <span class="footer__ctaText">Visiter Goudale</span>
+      </a>
+        </nav>
+
+        <div class="footer__divider" aria-hidden="true"></div>
+
+        <!-- Infos -->
+        <div class="footer__meta">
+          <a class="footer__metaItem" href="tel:+33321987600" aria-label="Téléphone"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#E66A00" d="M19.5 22a1.5 1.5 0 0 0 1.5-1.5V17a1.5 1.5 0 0 0-1.5-1.5c-1.17 0-2.32-.18-3.42-.55a1.51 1.51 0 0 0-1.52.37l-1.44 1.44a14.77 14.77 0 0 1-5.89-5.89l1.43-1.43c.41-.39.56-.97.38-1.53c-.36-1.09-.54-2.24-.54-3.41A1.5 1.5 0 0 0 7 3H3.5A1.5 1.5 0 0 0 2 4.5C2 14.15 9.85 22 19.5 22M3.5 4H7a.5.5 0 0 1 .5.5c0 1.28.2 2.53.59 3.72c.05.14.04.34-.12.5L6 10.68c1.65 3.23 4.07 5.65 7.31 7.32l1.95-1.97c.14-.14.33-.18.51-.13c1.2.4 2.45.6 3.73.6a.5.5 0 0 1 .5.5v3.5a.5.5 0 0 1-.5.5C10.4 21 3 13.6 3 4.5a.5.5 0 0 1 .5-.5"/></svg> <span>03 21 38 72 00</span></a>
+          <div class="footer__metaItem" aria-label="Adresse"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 256 256"><path fill="#E66A00" d="M128 64a40 40 0 1 0 40 40a40 40 0 0 0-40-40m0 64a24 24 0 1 1 24-24a24 24 0 0 1-24 24m0-112a88.1 88.1 0 0 0-88 88c0 31.4 14.51 64.68 42 96.25a254.2 254.2 0 0 0 41.45 38.3a8 8 0 0 0 9.18 0a254.2 254.2 0 0 0 41.37-38.3c27.45-31.57 42-64.85 42-96.25a88.1 88.1 0 0 0-88-88m0 206c-16.53-13-72-60.75-72-118a72 72 0 0 1 144 0c0 57.23-55.47 105-72 118"/></svg> <span>ZI du Fond Squin, 62500 Saint-Martin-lez-Tatinghem</span></div>
+
+          <div class="footer__social">
+            <span class="footer__socialLabel">Suivez-nous</span>
+            <div class="footer__socialRow">
+              <a class="footer__socialBtn" href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="#E66A00" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6zm14-2.9h.5"/><path d="M15.462 11.487a3.5 3.5 0 1 1-6.925 1.026a3.5 3.5 0 0 1 6.925-1.026"/></g></svg></a>
+              <a class="footer__socialBtn" href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#E66A00" d="M18.44 3.06H5.56a2.507 2.507 0 0 0-2.5 2.5v12.88a2.507 2.507 0 0 0 2.5 2.5h12.88a2.5 2.5 0 0 0 2.5-2.5V5.56a2.5 2.5 0 0 0-2.5-2.5m1.5 15.38a1.51 1.51 0 0 1-1.5 1.5H5.56a1.51 1.51 0 0 1-1.5-1.5V5.56a1.51 1.51 0 0 1 1.5-1.5h12.88a1.51 1.51 0 0 1 1.5 1.5Z"/><path fill="#E66A00" d="M6.376 10.748a1 1 0 1 1 2 0v6.5a1 1 0 0 1-2 0Z"/><circle cx="7.376" cy="6.744" r="1" fill="#E66A00"/><path fill="#E66A00" d="M17.62 13.37v3.88a1 1 0 1 1-2 0v-3.88a1.615 1.615 0 1 0-3.23 0v3.88a1 1 0 0 1-2 0v-6.5a1.016 1.016 0 0 1 1-1a.94.94 0 0 1 .84.47a3.61 3.61 0 0 1 5.39 3.15"/></svg></a>
+              <a class="footer__socialBtn" href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#E66A00" d="M19.02 4.975A9.93 9.93 0 0 0 2.07 12A9.935 9.935 0 0 0 12 21.935a10 10 0 0 0 3.8-.75a10.2 10.2 0 0 0 3.22-2.16a9.934 9.934 0 0 0 0-14.05m-.7 13.34a8.92 8.92 0 0 1-5.32 2.57v-6.56h1.88a1 1 0 0 0 0-2H13v-2.74a1 1 0 0 1 1-1h1.2a1 1 0 0 0 0-2h-1.7a2.5 2.5 0 0 0-2.5 2.5v3.24H9.13a1 1 0 1 0 0 2H11v6.56a8.919 8.919 0 1 1 9.26-5.47a9.1 9.1 0 0 1-1.94 2.9"/></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__divider" aria-hidden="true"></div>
+
+        <!-- Bas -->
+        <div class="footer__bottom">
+          <div class="footer__copyright">
+            © 2026 Transport Saint Arnould
+          </div>
+
+          <div class="footer__legal">
+            <a class="footer__legalLink" href="/fr/mentions-legales.html">Mentions légales</a>
+            <a class="footer__legalLink" href="/fr/politique-confidentialite.html">Politique de confidentialité</a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="../js/navbar.js"></script>
+  <script src="../js/reveal.js"></script>
+  <script src="../js/navbar-scroll.js"></script>
+  <script src="../js/metier-timeline.js"></script>
+  <script src="../js/timeline-section.js"></script>
+</body>
+</html>
