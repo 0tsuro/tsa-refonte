@@ -15,11 +15,13 @@ Bienvenue dans la version de déploiement statique de TSA pour Vercel. Cette ver
 ## 🚀 Déploiement sur Vercel
 
 ### Première connexion
+
 1. Allez sur [Vercel.com](https://vercel.com)
 2. Connectez-vous avec votre compte GitHub
 3. Importez ce projet
 
 ### Redéploiement
+
 Chaque push sur votre branche `main` redéploiera automatiquement le site.
 
 ## 📝 Notes importantes
@@ -46,6 +48,7 @@ Si vous devez mettre à jour les fichiers HTML à partir des fichiers PHP origin
 ## 📧 Contact
 
 Pour toute question, consultez le formulaire de contact sur :
+
 - Français : https://votre-domaine.com/fr/contact.html
 - English : https://votre-domaine.com/en/contact.html
 

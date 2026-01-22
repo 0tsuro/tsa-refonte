@@ -1,11 +1,13 @@
 # 📖 Guide de Déploiement TSA sur Vercel
 
 ## 🎯 Objectif
+
 Déployer le site TSA (Transport Saint Arnould) en tant que site statique HTML sur Vercel, sans nécessité de serveur PHP.
 
 ## ✅ Ce qui a été fait
 
 ### 1. Conversion PHP → HTML
+
 - ✓ Création de `/fr/index.html` (page d'accueil FR)
 - ✓ Création de `/fr/contact.html` (page contact FR)
 - ✓ Création de `/en/index.html` (page d'accueil EN)
@@ -13,12 +15,15 @@ Déployer le site TSA (Transport Saint Arnould) en tant que site statique HTML s
 - ✓ Création de `/index.html` (redirection automatique basée sur la langue du navigateur)
 
 ### 2. Configuration Vercel
+
 - ✓ Création de `vercel.json` avec configuration optimale
 - ✓ Création de `.vercelignore` pour ignorer les fichiers PHP
 - ✓ Headers de cache optimisés pour performance
 
 ### 3. Assets et ressources
+
 Tous les fichiers statiques restent dans :
+
 - `/css/` - Feuilles de style
 - `/js/` - Scripts JavaScript
 - `/assets/` - Images et ressources
@@ -26,12 +31,14 @@ Tous les fichiers statiques restent dans :
 ## 🚀 Déploiement
 
 ### Préalables
+
 1. Avoir un compte [Vercel](https://vercel.com)
 2. Avoir votre code sur GitHub
 
 ### Étapes de déploiement
 
 #### Option 1 : Import initial depuis GitHub
+
 ```bash
 # 1. Committez vos changements
 git add -A
@@ -47,6 +54,7 @@ git push origin main
 ```
 
 #### Option 2 : Utiliser Vercel CLI
+
 ```bash
 # 1. Installez Vercel CLI
 npm i -g vercel
@@ -61,6 +69,7 @@ vercel
 ```
 
 ### Vérification du déploiement
+
 1. Allez sur votre URL Vercel
 2. Testez les redirections :
    - `https://votre-projet.vercel.app/` → devrait rediriger vers `/fr/` ou `/en/`
@@ -70,14 +79,18 @@ vercel
 ## 📝 Notes importantes
 
 ### Formulaire de contact
+
 **Statut actuel :** Désactivé (affichage uniquement)
 
 Pour activer le formulaire, vous devrez :
+
 1. Rendre le formulaire fonctionnel (serverless functions sur Vercel)
 2. Ou utiliser un service tiers (Formspree, Basin, etc.)
 
 ### Chemins d'URL
+
 Tous les chemins dans le HTML utilisent des chemins absolus :
+
 - `<img src="/assets/img/logo.svg">`
 - `<link href="/css/style.css">`
 - `<script src="/js/navbar.js"></script>`
@@ -85,6 +98,7 @@ Tous les chemins dans le HTML utilisent des chemins absolus :
 **Important** : Garder les chemins absolus (/chemin/au/fichier) plutôt que relatifs (../chemin/au/fichier)
 
 ### Cache et performances
+
 - **CSS, JS, images** : Cachées 1 an (max-age=31536000)
 - **HTML** : Cachées 1 heure (max-age=3600) pour les mises à jour rapides
 
@@ -135,6 +149,7 @@ TSA/
 ## 💡 Astuce
 
 Pour tester localement avant le déploiement :
+
 ```bash
 # Avec Python 3
 cd /Users/ots/Documents/BGSO/TSA

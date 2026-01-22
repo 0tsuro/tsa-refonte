@@ -1,18 +1,20 @@
 <!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Transport Saint Omer – TSA</title>
-  <script>
-    // Redirection à la racine vers /fr/index.html
-    const lang = navigator.language ? navigator.language.substring(0, 2) : 'fr';
-    const supportedLangs = ['en', 'fr'];
-    const targetLang = supportedLangs.includes(lang) ? lang : 'fr';
-    window.location.href = `/${targetLang}/index.html`;
-  </script>
-</head>
-<body>
-  <p>Redirection en cours...</p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Transport Saint Omer – TSA</title>
+    <script>
+      // Redirection à la racine vers /fr/index.html
+      const lang = navigator.language
+        ? navigator.language.substring(0, 2)
+        : "fr";
+      const supportedLangs = ["en", "fr"];
+      const targetLang = supportedLangs.includes(lang) ? lang : "fr";
+      window.location.href = `/${targetLang}/index.html`;
+    </script>
+  </head>
+  <body>
+    <p>Redirection en cours...</p>
+  </body>
 </html>

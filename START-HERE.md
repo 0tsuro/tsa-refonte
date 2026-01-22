@@ -3,6 +3,7 @@
 ## ✅ Ce qui a été fait
 
 ### 📄 Fichiers HTML créés (5 fichiers)
+
 - `index.html` - Page de redirection intelligente basée sur la langue
 - `fr/index.html` - Page d'accueil en français (complète)
 - `fr/contact.html` - Page de contact en français
@@ -10,10 +11,12 @@
 - `en/contact.html` - Page de contact en anglais
 
 ### 🔧 Configuration Vercel
+
 - `vercel.json` - Configuration optimisée avec cache headers
 - `.vercelignore` - Fichiers PHP ignorés lors du déploiement
 
 ### 📚 Scripts et documentation
+
 - `deploy-check.sh` - Vérifier que tout est prêt
 - `quick-deploy.sh` - Déploiement rapide
 - `DEPLOYMENT-GUIDE.md` - Guide complet
@@ -23,12 +26,14 @@
 ## 🚀 Pour déployer
 
 ### Étape 1 : Vérifier les fichiers
+
 ```bash
 cd /Users/ots/Documents/BGSO/TSA
 ./deploy-check.sh
 ```
 
 ### Étape 2 : Committer et pousser
+
 ```bash
 git add -A
 git commit -m 'Deploy: Convert PHP to static HTML for Vercel'
@@ -36,6 +41,7 @@ git push
 ```
 
 ### Étape 3 : Déployer sur Vercel
+
 ```bash
 # Option 1 : Via CLI Vercel
 vercel
@@ -46,18 +52,19 @@ vercel
 
 ## 📊 Résumé des changements
 
-| Aspect | Avant (PHP) | Après (HTML) |
-|--------|-----------|------------|
-| Serveur | PHP requis | Aucun |
-| Formulaire | Fonctionnel | Désactivé (statique) |
-| Performance | Lente | Ultra-rapide (CDN) |
-| Coût | Serveur payant | Gratuit (Vercel) |
-| Déploiement | Manuel | Auto (sur chaque push) |
-| Sécurité | PHP exposé | Site statique sécurisé |
+| Aspect      | Avant (PHP)    | Après (HTML)           |
+| ----------- | -------------- | ---------------------- |
+| Serveur     | PHP requis     | Aucun                  |
+| Formulaire  | Fonctionnel    | Désactivé (statique)   |
+| Performance | Lente          | Ultra-rapide (CDN)     |
+| Coût        | Serveur payant | Gratuit (Vercel)       |
+| Déploiement | Manuel         | Auto (sur chaque push) |
+| Sécurité    | PHP exposé     | Site statique sécurisé |
 
 ## 🌐 URLs après déploiement
 
 Une fois en ligne sur Vercel :
+
 ```
 https://votre-projet.vercel.app/              → Redirection auto
 https://votre-projet.vercel.app/fr/           → Accueil FR
@@ -68,9 +75,10 @@ https://votre-projet.vercel.app/en/contact    → Contact EN
 
 ## ⚠️ Note importante
 
-**Le formulaire de contact est désactivé** sur cette version statique car Vercel n'a pas de serveur PHP. 
+**Le formulaire de contact est désactivé** sur cette version statique car Vercel n'a pas de serveur PHP.
 
 Options pour le réactiver :
+
 1. Serverless Functions (Vercel API routes)
 2. Service tiers (Formspree, Basin, etc.)
 3. Backend séparé
