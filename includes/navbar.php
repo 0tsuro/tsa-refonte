@@ -24,22 +24,23 @@ $isBeerActive = in_array($pageKey, $beerKeys, true) ? ' is-active' : '';
         <img src="/assets/img/logo.svg" alt="Transport Saint Arnould">
       </a>
 
-      <!-- Menu desktop -->
-      <ul class="navbar__menu" id="mainNav" role="list">
-        <li class="nav-item">
-          <a class="nav-link<?= active('home', $pageKey); ?>" href="<?= $routes['home'][$lang]; ?>">
-            <?= $lang === 'fr' ? 'Accueil' : 'Home'; ?>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link<?= active('contact', $pageKey); ?>" href="<?= $routes['contact'][$lang]; ?>">
-            <?= $lang === 'fr' ? 'Nous Contacter' : 'Contact'; ?>
-          </a>
-        </li>
-      </ul>
+      <!-- Menu desktop (moved to actions for right alignment) -->
 
       <div class="navbar__actions">
+        <!-- Menu desktop (moved here for right alignment) -->
+        <ul class="navbar__menu" id="mainNav" role="list">
+          <li class="nav-item">
+            <a class="nav-link<?= active('home', $pageKey); ?>" href="<?= $routes['home'][$lang]; ?>">
+              <?= $lang === 'fr' ? 'Accueil' : 'Home'; ?>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link<?= active('contact', $pageKey); ?>" href="<?= $routes['contact'][$lang]; ?>">
+              <?= $lang === 'fr' ? 'Nous Contacter' : 'Contact'; ?>
+            </a>
+          </li>
+        </ul>
         <a class="btn-cta" href="https://brasserie-goudale.com">
           <span class="btn-cta__icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24">

@@ -1,14 +1,14 @@
 <?php
 // Charger les variables d'environnement
-require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/load-env.php';
+require_once '../includes/load-env.php';
 
 session_start();
 $lang = 'fr';
 $pageKey = 'contact';
 
 // Inclure les helpers
-require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/captcha.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/email-helper.php';
+require_once '../includes/captcha.php';
+require_once '../includes/email-helper.php';
 
 // Générer un token CSRF si absent
 if (empty($_SESSION['csrf_token'])) {

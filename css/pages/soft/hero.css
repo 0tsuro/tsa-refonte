@@ -1,0 +1,72 @@
+/* ========================================================================
+   SOFT-HERO.CSS — Section Héro Soft
+   ========================================================================
+   
+   Purpose: Styles la première section de la page soft avec
+            titre principal, sous-titre et paragraphe.
+   
+   Structure:
+   - .soft-hero: Conteneur principal
+   - .soft-hero__title: Titre "BIÈRES"
+   - .soft-hero__subtitle: Sous-titre "Soft"
+   - .soft-hero__text: Paragraphe descriptif
+   
+   ========================================================================== */
+
+.soft-hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-dark-alt);
+  color: #fff;
+  padding: clamp(60px, 8vw, 100px) 0;
+}
+
+.soft-hero__inner {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 clamp(16px, 3vw, 48px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.soft-hero__title {
+  font-size: clamp(48px, 10vw, 96px);
+  letter-spacing: -0.02em;
+  margin: 0 0 16px 0;
+  line-height: 0.95;
+}
+
+.soft-hero__subtitle {
+  font-size: clamp(28px, 6vw, 56px);
+  font-weight: 600;
+  color: var(--color-accent-gold);
+  margin: 0 0 48px 0;
+  line-height: 1.1;
+}
+
+.soft-hero__text {
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.6;
+  color: var(--color-grey-border);
+  max-width: 700px;
+  font-weight: 200;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .soft-hero {
+    min-height: auto;
+    padding: clamp(40px, 6vw, 80px) 0;
+  }
+
+  .soft-hero__title {
+    margin-bottom: 12px;
+  }
+
+  .soft-hero__subtitle {
+    margin-bottom: 32px;
+  }
+}

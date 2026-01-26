@@ -1,0 +1,170 @@
+/* ==========================================================================
+   PACK CALLOUTS — VERSION SIMPLE & STABLE
+   ========================================================================== */
+
+.pack-callouts {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+
+  --pc-img-w: 500px;
+
+  display: grid;
+  grid-template-columns: 2fr minmax(280px, var(--pc-img-w)) 2fr;
+  grid-template-rows: minmax(160px, 1fr) minmax(160px, 1fr);
+
+  column-gap: 200px;
+  row-gap: 24px;
+
+  padding: clamp(40px, 6vw, 80px) 0;
+  align-items: center;
+}
+
+/* IMAGE */
+.pc__media {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.pc__img {
+  width: 100%;
+  max-width: var(--pc-img-w);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 30px 80px rgba(0, 0, 0, 0.55));
+}
+
+/* TEXTES */
+.pc__item {
+  max-width: none;
+  min-width: 0;
+}
+
+.pc__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* ✅ LIGNE DORÉE */
+.pc__divider {
+  display: block; /* <= important */
+  width: 110px;
+  height: 3px;
+  margin: 12px 0;
+  border-radius: full;
+  background: rgba(201, 162, 74, 0.65);
+  opacity: 1;
+  animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 110px;
+    opacity: 1;
+  }
+}
+
+/* sécurité si un reset tue les span */
+.pc__divider[aria-hidden="true"] {
+  display: block;
+}
+
+.pc__text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* POSITIONS */
+.pc__item--left {
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: start;
+  align-self: end;
+  text-align: left;
+}
+
+.pc__item--rightTop {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  align-self: start;
+  text-align: left;
+}
+
+.pc__item--rightBottom {
+  grid-column: 3;
+  grid-row: 2;
+  justify-self: end;
+  align-self: end;
+  text-align: left;
+}
+
+/* RESPONSIVE */
+@media (max-width: 980px) {
+  .pack-callouts {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 20px;
+    padding: 40px 0;
+  }
+
+  .pc__media {
+    grid-column: 1;
+    grid-row: auto;
+    margin: 10px 0 20px;
+  }
+
+  .pc__img {
+    max-width: min(420px, 100%);
+    width: 100%;
+  }
+
+  .pc__item {
+    max-width: none;
+    width: 100%;
+    padding: 10px 4vw;
+    border-radius: 12px;
+    background: none;
+    border: none;
+    font-size: 15px;
+    line-height: 1.5;
+    word-break: break-word;
+    box-sizing: border-box;
+  }
+
+  .pc__title {
+    font-size: 1.1rem;
+  }
+
+  .pc__item--left,
+  .pc__item--rightTop,
+  .pc__item--rightBottom {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: stretch;
+    align-self: auto;
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .pc__item {
+    font-size: 13px;
+    padding: 8px 2vw;
+  }
+  .pc__title {
+    font-size: 1rem;
+  }
+}

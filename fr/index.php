@@ -173,7 +173,7 @@
 
             <div class="card">
                 <div class="cardBody">
-                    <h2>Station de lavage et <br>garage entretien<span class="timeline-number">intégré</span></h2>
+                    <h2>Station de lavage et <br>garage entretien <span class="timeline-number">intégré</span></h2>
                     <p>
                         Des camions propres et entretenus par nos équipes internes pour assurer une fiabilité sans faille à vos transports. 
                     </p>

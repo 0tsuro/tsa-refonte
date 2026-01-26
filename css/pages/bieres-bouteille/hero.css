@@ -1,0 +1,71 @@
+/* ========================================================================
+   BIERES-BOUTEILLE-HERO.CSS — Section Héro Bières Bouteille
+   ========================================================================
+   
+   Purpose: Styles la première section de la page bières bouteille avec
+            titre principal, sous-titre et paragraphe.
+   
+   Structure:
+   - .bieres-bouteille-hero: Conteneur principal
+   - .bieres-bouteille-hero__title: Titre "BIÈRES"
+   - .bieres-bouteille-hero__subtitle: Sous-titre "Bouteilles"
+   - .bieres-bouteille-hero__text: Paragraphe descriptif
+   
+   ========================================================================== */
+
+.bieres-bouteille-hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-dark-alt);
+  color: #fff;
+  padding: clamp(60px, 8vw, 100px) 0;
+}
+
+.bieres-bouteille-hero__inner {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 clamp(16px, 3vw, 48px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bieres-bouteille-hero__title {
+  font-size: clamp(48px, 10vw, 96px);
+  letter-spacing: -0.02em;
+  margin: 0 0 16px 0;
+  line-height: 0.95;
+}
+
+.bieres-bouteille-hero__subtitle {
+  font-size: clamp(28px, 6vw, 56px);
+  color: var(--color-accent-gold);
+  margin: 0 0 48px 0;
+  line-height: 1.1;
+}
+
+.bieres-bouteille-hero__text {
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.6;
+  color: var(--color-grey-border);
+  max-width: 700px;
+  font-weight: 200;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bieres-bouteille-hero {
+    min-height: auto;
+    padding: clamp(40px, 6vw, 80px) 0;
+  }
+
+  .bieres-bouteille-hero__title {
+    margin-bottom: 12px;
+  }
+
+  .bieres-bouteille-hero__subtitle {
+    margin-bottom: 32px;
+  }
+}

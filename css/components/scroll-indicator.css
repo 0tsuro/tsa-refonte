@@ -1,0 +1,56 @@
+.scroll-indicator {
+  position: absolute;
+  bottom: 120px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.scroll-indicator__text {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+  opacity: 0.8;
+}
+
+.scroll-indicator__line {
+  width: 2px;
+  height: 20px;
+  background-color: white;
+  animation: scroll-line 1.5s ease-in-out infinite;
+}
+
+@keyframes scroll-line {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  50% {
+    opacity: 1;
+    height: 20px;
+  }
+  100% {
+    opacity: 0;
+    height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-indicator {
+    bottom: 40px;
+    right: 30px;
+  }
+
+  .scroll-indicator__text {
+    font-size: 10px;
+  }
+
+  .scroll-indicator__line {
+    height: 16px;
+  }
+}
