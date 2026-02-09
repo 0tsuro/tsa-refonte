@@ -73,38 +73,38 @@
           <div class="beers-gallery__grid">
             <div class="beers-gallery__item-wrapper">
               <div class="beers-gallery__item">
-                <img src="../assets/img/Index/recettes/blonde.png" alt="Bière 1">
+                <img src="../assets/img/complet.jpg" alt="Bière 1">
               </div>
               <div class="beers-gallery__caption">
-                <div class="beers-gallery__title">Lager</div>
-                <div class="beers-gallery__subtitle">2 - 8%</div>
+                <div class="beers-gallery__title">Complet et groupage</div>
+                <div class="beers-gallery__subtitle">Spécialiste sur le UK, pour l'ensemble de <br> vos flux en complets et en lots.</div>
               </div>
             </div>
             <div class="beers-gallery__item-wrapper">
               <div class="beers-gallery__item">
-                <img src="../assets/img/Index/recettes/cuivrée.png" alt="Bière 2">
+                <img src="../assets/img/crossdock.jpg" alt="Bière 2">
               </div>
               <div class="beers-gallery__caption">
-                <div class="beers-gallery__title">Bière d'abbaye</div>
-                <div class="beers-gallery__subtitle">> 7%</div>
+                <div class="beers-gallery__title">Cross dock</div>
+                <div class="beers-gallery__subtitle">Au quotidien, vos livraisons au départ de <br> nos quais en groupement ou complet.</div>
               </div>
             </div>
             <div class="beers-gallery__item-wrapper">
               <div class="beers-gallery__item">
-                <img src="../assets/img/Index/recettes/Coca.png" alt="Bière 3">
+                <img src="../assets/img/affretement.jpg" alt="Bière 3">
               </div>
               <div class="beers-gallery__caption">
-                <div class="beers-gallery__title">Aromatisée</div>
-                <div class="beers-gallery__subtitle">Rouge, framboise, pêche ...</div>
+                <div class="beers-gallery__title">Affrètement</div>
+                <div class="beers-gallery__subtitle">Une solution globale pour tous vos <br>transports avec nos nombreux <br>partenaires en Europe.</div>
               </div>
             </div>
             <div class="beers-gallery__item-wrapper">
               <div class="beers-gallery__item">
-                <img src="../assets/img/Index/recettes/Rouge.png" alt="Bière 4">
+                <img src="../assets/img/douane.jpg" alt="Bière 4">
               </div>
               <div class="beers-gallery__caption">
-                <div class="beers-gallery__title">Stout</div>
-                <div class="beers-gallery__subtitle"></div>
+                <div class="beers-gallery__title">Douane</div>
+                <div class="beers-gallery__subtitle">Vos formalités douanières réalisées de <br>manière fluide par nos équipes pour vos <br>expéditions transfrontalières.</div>
               </div>
             </div>
 

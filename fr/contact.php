@@ -128,15 +128,16 @@ $recaptcha_site_key = get_recaptcha_site_key();
             <div class="contact-info">
               <div class="contact-info__item">
                 <h3 class="contact-info__label">Téléphone</h3>
-                <p class="contact-info__value"><a href="tel:+33123456789">03 21 98 76 00</a></p>
+                <p class="contact-info__value"><a href="tel:+33123456789">03 21 38 72 00</a></p>
               </div>
 
               <div class="contact-info__item">
                 <h3 class="contact-info__label">Adresse</h3>
                 <p class="contact-info__value">
-                  Brasserie Saint Omer<br>
-                  35bis boulevard de Strasbourg<br>
-                62500 Saint-Omer<br>
+                  Transport Saint Arnould<br>
+                  ZI du fond squin<br>
+                  Rue de la croix pélerine<br>
+                62500 Saint-Martin-Lez-Tatinghem<br>
                   France
                 </p>
               </div>

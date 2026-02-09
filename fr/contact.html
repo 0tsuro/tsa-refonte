@@ -19,155 +19,48 @@
 
   <body>
     <div class="page-wrapper">
-      <!-- NAVBAR -->
       <header class="site-header" role="banner">
         <nav class="navbar" aria-label="Navigation principale">
           <div class="navbar__inner">
-            <a
-              class="navbar__logo"
-              href="/fr/index.html"
-              aria-label="Aller à l'accueil"
-            >
-              <img src="/assets/img/logo.svg" alt="Transport Saint Arnould" />
-            </a>
+            <a class="navbar__logo" href="/fr/index.html" aria-label="Aller à l’accueil"><img src="/assets/img/logo.svg" alt="Transport Saint Arnould"></a>
 
-            <!-- Menu desktop: moved into actions for right alignment -->
+            <ul class="navbar__menu" id="mainNav" role="list">
+              <li class="nav-item"><a class="nav-link" href="/fr/index.html">Accueil</a></li>
+              <li class="nav-item"><a class="nav-link is-active" href="/fr/contact.html">Nous Contacter</a></li>
+            </ul>
 
             <div class="navbar__actions">
-              <!-- Menu desktop (moved here for right alignment) -->
-              <ul class="navbar__menu" id="mainNav" role="list">
-                <li class="nav-item">
-                  <a class="nav-link" href="/fr/index.html"> Accueil </a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link is-active" href="/fr/contact.html">
-                    Nous Contacter
-                  </a>
-                </li>
-              </ul>
               <a class="btn-cta" href="https://brasserie-goudale.com">
-                <span class="btn-cta__icon" aria-hidden="true">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="24"
-                    viewBox="0 0 12 24"
-                  >
-                    <defs>
-                      <path
-                        id="SVG1pzpbdYY"
-                        fill="#fff"
-                        d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z"
-                      />
-                    </defs>
-                    <use
-                      fill-rule="evenodd"
-                      href="#SVG1pzpbdYY"
-                      transform="rotate(-180 5.02 9.505)"
-                    />
-                  </svg>
-                </span>
+                <span class="btn-cta__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24"><defs><path id="SVG1pzpbdYY" fill="#fff" d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z"/></defs><use fill-rule="evenodd" href="#SVG1pzpbdYY" transform="rotate(-180 5.02 9.505)"/></svg></span>
                 <span class="btn-cta__text">Visiter Goudale</span>
               </a>
 
-              <!-- Lang desktop -->
-              <div class="lang lang--switch">
-                <button
-                  class="lang__btn"
-                  type="button"
-                  aria-label="Choisir la langue"
-                >
-                  FR
-                  <span class="chev" aria-hidden="true">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m7 10l5 5l5-5"
-                        stroke-width="1"
-                      />
-                    </svg>
-                  </span>
-                </button>
+              <a class="btn btn--orange" href="#">
+                <span class="btn__text">Obtenir un devis</span>
+                <span class="btn__icon btn__icon--right" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </a>
 
-                <div
-                  class="dropdown dropdown--right"
-                  role="menu"
-                  aria-label="Choix de langue"
-                >
-                  <a
-                    class="dropdown__link"
-                    href="/en/contact.html"
-                    role="menuitem"
-                  >
-                    EN
-                  </a>
-                </div>
+              <div class="lang lang--switch">
+                <button class="lang__btn" type="button" aria-label="Choisir la langue">FR
+                  <span class="chev" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m7 10l5 5l5-5" stroke-width="1"/></svg></span>
+                </button>
+                <div class="dropdown dropdown--right" role="menu" aria-label="Choix de langue"><a class="dropdown__link" href="/en/contact.html" role="menuitem">EN</a></div>
               </div>
 
-              <!-- Burger -->
-              <button
-                class="nav-burger"
-                type="button"
-                aria-label="Ouvrir le menu"
-                aria-expanded="false"
-                aria-controls="mobileNav"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill="#fff"
-                    d="M4 17.27v-1h16v1zm0-4.77v-1h16v1zm0-4.77v-1h16v1z"
-                  />
-                </svg>
-              </button>
+              <button class="nav-burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileNav"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M4 17.27v-1h16v1zm0-4.77v-1h16v1zm0-4.77v-1h16v1z"/></svg></button>
             </div>
           </div>
         </nav>
 
-        <!-- OVERLAY -->
         <div class="mobile-overlay" id="mobileNav" aria-hidden="true">
           <div class="mobile-overlay__inner">
             <div class="mobile-overlay__top">
-              <a class="mobile-overlay__logo" href="/fr/index.html">
-                <img src="/assets/img/logo.svg" alt="Transport Saint-Omer" />
-              </a>
-
-              <button
-                class="mobile-overlay__close"
-                type="button"
-                aria-label="Fermer le menu"
-              >
-                ✕
-              </button>
+              <a class="mobile-overlay__logo" href="/fr/index.html"><img src="/assets/img/logo.svg" alt="Brasserie Saint-Omer"></a>
+              <button class="mobile-overlay__close" type="button" aria-label="Fermer le menu">✕</button>
             </div>
-
             <div class="mobile-overlay__content">
               <div class="mobile-overlay__menu-slot"></div>
-
-              <div class="mobile-lang">
-                <div class="mobile-lang__label">Langue</div>
-
-                <div class="mobile-lang__row">
-                  <a class="mobile-lang__pill is-active" href="/fr/contact.html"
-                    >FR</a
-                  >
-                  <a class="mobile-lang__pill" href="/en/contact.html">EN</a>
-                </div>
-              </div>
+              <div class="mobile-lang"><div class="mobile-lang__label">Langue</div><div class="mobile-lang__row"><a class="mobile-lang__pill is-active" href="/fr/contact.html">FR</a><a class="mobile-lang__pill" href="/en/contact.html">EN</a></div></div>
             </div>
           </div>
         </div>
@@ -203,184 +96,19 @@
               <div class="contact-socials">
                 <h3 class="contact-socials__title">Suivez-nous</h3>
                 <div class="contact-socials__list">
-                  <a
-                    href="https://www.instagram.com/goudale.officiel/"
-                    class="contact-social__link"
-                    aria-label="Instagram"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                      >
-                        <path
-                          d="M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6zm14-2.9h.5"
-                        />
-                        <path
-                          d="M15.462 11.487a3.5 3.5 0 1 1-6.925 1.026a3.5 3.5 0 0 1 6.925-1.026"
-                        />
-                      </g>
-                    </svg>
+                  <a href="https://www.instagram.com/goudale.officiel/" class="contact-social__link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6zm14-2.9h.5"/></g><path d="M15.462 11.487a3.5 3.5 0 1 1-6.925 1.026a3.5 3.5 0 0 1 6.925-1.026"/></svg>
                   </a>
-                  <a
-                    href="https://www.linkedin.com/company/brasserie-goudale/"
-                    class="contact-social__link"
-                    aria-label="LinkedIn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M18.44 3.06H5.56a2.507 2.507 0 0 0-2.5 2.5v12.88a2.507 2.507 0 0 0 2.5 2.5h12.88a2.5 2.5 0 0 0 2.5-2.5V5.56a2.5 2.5 0 0 0-2.5-2.5m1.5 15.38a1.51 1.51 0 0 1-1.5 1.5H5.56a1.51 1.51 0 0 1-1.5-1.5V5.56a1.51 1.51 0 0 1 1.5-1.5h12.88a1.51 1.51 0 0 1 1.5 1.5Z"
-                      />
-                      <path
-                        fill="currentColor"
-                        d="M6.376 10.748a1 1 0 1 1 2 0v6.5a1 1 0 0 1-2 0Z"
-                      />
-                      <circle cx="7.376" cy="6.744" r="1" fill="currentColor" />
-                      <path
-                        fill="currentColor"
-                        d="M17.62 13.37v3.88a1 1 0 1 1-2 0v-3.88a1.615 1.615 0 1 0-3.23 0v3.88a1 1 0 0 1-2 0v-6.5a1.016 1.016 0 0 1 1-1a.94.94 0 0 1 .84.47a3.61 3.61 0 0 1 5.39 3.15"
-                      />
-                    </svg>
+
+                  <a href="https://www.linkedin.com/company/brasserie-goudale/" class="contact-social__link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M18.44 3.06H5.56a2.507 2.507 0 0 0-2.5 2.5v12.88a2.507 2.507 0 0 0 2.5 2.5h12.88a2.5 2.5 0 0 0 2.5-2.5V5.56a2.5 2.5 0 0 0-2.5-2.5m1.5 15.38a1.51 1.51 0 0 1-1.5 1.5H5.56a1.51 1.51 0 0 1-1.5-1.5V5.56a1.51 1.51 0 0 1 1.5-1.5h12.88a1.51 1.51 0 0 1 1.5 1.5Z"/><path fill="currentColor" d="M6.376 10.748a1 1 0 1 1 2 0v6.5a1 1 0 0 1-2 0Z"/></svg>
                   </a>
-                  <a
-                    href="https://www.facebook.com/GoudaleBrasserie"
-                    class="contact-social__link"
-                    aria-label="Facebook"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M19.02 4.975A9.93 9.93 0 0 0 2.07 12A9.935 9.935 0 0 0 12 21.935a10 10 0 0 0 3.8-.75a10.2 10.2 0 0 0 3.22-2.16a9.934 9.934 0 0 0 0-14.05m-.7 13.34a8.92 8.92 0 0 1-5.32 2.57v-6.56h1.88a1 1 0 0 0 0-2H13v-2.74a1 1 0 0 1 1-1h1.2a1 1 0 0 0 0-2h-1.7a2.5 2.5 0 0 0-2.5 2.5v3.24H9.13a1 1 0 1 0 0 2H11v6.56a8.919 8.919 0 1 1 9.26-5.47a9.1 9.1 0 0 1-1.94 2.9"
-                      />
-                    </svg>
+
+                  <a href="https://www.facebook.com/GoudaleBrasserie" class="contact-social__link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19.02 4.975A9.93 9.93 0 0 0 2.07 12A9.935 9.935 0 0 0 12 21.935a10 10 0 0 0 3.8-.75a10.2 10.2 0 0 0 3.22-2.16a9.934 9.934 0 0 0 0-14.05m-.7 13.34a8.92 8.92 0 0 1-5.32 2.57v-6.56h1.88a1 1 0 0 0 0-2H13v-2.74a1 1 0 0 1 1-1h1.2a1 1 0 0 0 0-2h-1.7a2.5 2.5 0 0 0-2.5 2.5v3.24H9.13a1 1 0 1 0 0 2H11v6.56a8.919 8.919 0 1 1 9.26-5.47a9.1 9.1 0 0 1-1.94 2.9"/></svg>
                   </a>
                 </div>
               </div>
-            </div>
-
-            <!-- RIGHT COLUMN - FORM -->
-            <div class="contact-right">
-              <div class="contact-form__notice">
-                <p>
-                  <strong>Version de démonstration :</strong> Ce formulaire est
-                  désactivé pour cette version statique. Veuillez utiliser le
-                  téléphone ou l'adresse email pour nous contacter.
-                </p>
-              </div>
-
-              <form
-                class="contact-form"
-                method="POST"
-                action="#"
-                style="opacity: 0.5; pointer-events: none"
-              >
-                <div class="contact-form__row">
-                  <div class="contact-form__group">
-                    <label for="prenom" class="contact-form__label"
-                      >Prénom*</label
-                    >
-                    <input
-                      type="text"
-                      id="prenom"
-                      name="prenom"
-                      class="contact-form__input"
-                      disabled
-                    />
-                  </div>
-
-                  <div class="contact-form__group">
-                    <label for="nom" class="contact-form__label">Nom*</label>
-                    <input
-                      type="text"
-                      id="nom"
-                      name="nom"
-                      class="contact-form__input"
-                      disabled
-                    />
-                  </div>
-                </div>
-
-                <div class="contact-form__row">
-                  <div class="contact-form__group">
-                    <label for="email" class="contact-form__label"
-                      >Email*</label
-                    >
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      class="contact-form__input"
-                      disabled
-                    />
-                  </div>
-
-                  <div class="contact-form__group">
-                    <label for="telephone" class="contact-form__label"
-                      >Téléphone*</label
-                    >
-                    <input
-                      type="tel"
-                      id="telephone"
-                      name="telephone"
-                      class="contact-form__input"
-                      disabled
-                    />
-                  </div>
-                </div>
-
-                <div class="contact-form__group contact-form__group--full">
-                  <label for="objet" class="contact-form__label">Objet</label>
-                  <select
-                    id="objet"
-                    name="objet"
-                    class="contact-form__select"
-                    disabled
-                  >
-                    <option value="">Sélectionner un sujet</option>
-                    <option value="commercial">Demande commerciale</option>
-                    <option value="partenariat">Partenariat</option>
-                    <option value="reclamation">Réclamation</option>
-                    <option value="autre">Autre</option>
-                  </select>
-                </div>
-
-                <div class="contact-form__group contact-form__group--full">
-                  <label for="message" class="contact-form__label"
-                    >Message*</label
-                  >
-                  <textarea
-                    id="message"
-                    name="message"
-                    class="contact-form__textarea"
-                    rows="6"
-                    disabled
-                  ></textarea>
-                </div>
 
                 <div class="contact-form__checkbox">
                   <p class="contact-form__required-note">

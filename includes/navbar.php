@@ -24,23 +24,22 @@ $isBeerActive = in_array($pageKey, $beerKeys, true) ? ' is-active' : '';
         <img src="/assets/img/logo.svg" alt="Transport Saint Arnould">
       </a>
 
-      <!-- Menu desktop (moved to actions for right alignment) -->
+      <!-- Menu desktop (moved here for left alignment) -->
+      <ul class="navbar__menu" id="mainNav" role="list">
+        <li class="nav-item">
+          <a class="nav-link<?= active('home', $pageKey); ?>" href="<?= $routes['home'][$lang]; ?>">
+            <?= $lang === 'fr' ? 'Accueil' : 'Home'; ?>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link<?= active('contact', $pageKey); ?>" href="<?= $routes['contact'][$lang]; ?>">
+            <?= $lang === 'fr' ? 'Nous Contacter' : 'Contact'; ?>
+          </a>
+        </li>
+      </ul>
 
       <div class="navbar__actions">
-        <!-- Menu desktop (moved here for right alignment) -->
-        <ul class="navbar__menu" id="mainNav" role="list">
-          <li class="nav-item">
-            <a class="nav-link<?= active('home', $pageKey); ?>" href="<?= $routes['home'][$lang]; ?>">
-              <?= $lang === 'fr' ? 'Accueil' : 'Home'; ?>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link<?= active('contact', $pageKey); ?>" href="<?= $routes['contact'][$lang]; ?>">
-              <?= $lang === 'fr' ? 'Nous Contacter' : 'Contact'; ?>
-            </a>
-          </li>
-        </ul>
         <a class="btn-cta" href="https://brasserie-goudale.com">
           <span class="btn-cta__icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24">
@@ -49,6 +48,15 @@ $isBeerActive = in_array($pageKey, $beerKeys, true) ? ' is-active' : '';
             </svg>
           </span>
           <span class="btn-cta__text">Visiter Goudale</span>
+        </a>
+
+        <a class="btn btn--orange" href="#">
+          <span class="btn__text"><?= $lang === 'fr' ? 'Obtenir un devis' : ''; ?></span>
+          <span class="btn__icon btn__icon--right" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+              <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
         </a>
 
         <!-- Lang desktop -->

@@ -119,13 +119,12 @@
 .beers-gallery__item-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 /* Titres et sous-titres sous chaque image */
 .beers-gallery__caption {
   margin-top: 14px;
-  text-align: center;
+  text-align: left;
   width: 100%;
   position: static;
 }
